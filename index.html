@@ -112,8 +112,8 @@
         <p class="hint">浮いた時間を開拓・商談に回すと成約が増える前提。控えめな数字で。</p>
       </div>
       <div class="field">
-        <label>増える成約（件／月） <span class="val" id="lblDeals">0.5件</span></label>
-        <input type="range" id="deals" min="0" max="3" step="0.1" value="0.5">
+        <label>増える成約（件／月） <span class="val" id="lblDeals">1件</span></label>
+        <input type="range" id="deals" min="0" max="10" step="1" value="1">
       </div>
       <div class="field">
         <label>成約1件あたりの粗利（円）</label>
@@ -197,7 +197,7 @@
     $('lblPeople').textContent = people + '名';
     $('lblHours').textContent  = hours.toFixed(1) + 'h／日';
     $('lblCut').textContent    = Math.round(cut*100) + '%';
-    $('lblDeals').textContent  = deals.toFixed(1) + '件';
+    $('lblDeals').textContent  = deals.toFixed(0) + '件';
     $('lblTerm').textContent   = term + 'ヶ月';
 
     const savedHours = people * hours * days * cut;       // 月間削減時間
